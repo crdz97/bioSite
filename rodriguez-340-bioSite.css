@@ -1,0 +1,227 @@
+/*
+Carolina Rodriguez
+CSD-340 bioSite Project CSS File 
+
+Resources;
+Frost, B. (2016). Atomic design. Brad Frost.
+OpenAI. (2023). ChatGPT (GPT-4) [Large language model].https://chat.openai.com
+W3Schools. (n.d.). CSS overflow property. W3Schools.https://www.w3schools.com/cssref/pr_pos_overflow.php
+W3Schools. (n.d.). CSS positioning. W3Schools.https://www.w3schools.com/css/css_positioning.asp
+W3Schools. (n.d.). Style display property. W3Schoolshttps://www.w3schools.com/jsref/prop_style_display.asp
+*/
+
+/* Landing Page CSS */
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    width: 90%;   /* Limits content width */
+    margin:  auto;      /* Centers the container */
+}
+
+/* "Hero" image div */
+#hero-image {
+    position: relative;  /* reference for absolute positioning */
+    margin: 0 auto;
+    overflow: hidden;    /* hides overflow */
+}
+
+#hero-image img {
+    width: 100%;         /* image fills container */
+    height: auto;        /* maintain aspect ratio */
+    display: block;
+}
+
+/* H1 styling */
+#container h1 {         
+    font-size: 5em;      
+    font-weight: bold;
+    color: #258a06;
+}
+
+#quote h2 {
+    margin: 0;
+    top: 20px;
+    font-size: 3.2em;
+    font-style: italic;
+    text-align: center;
+    color: #0b8e54;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* three columns in 1 fraction with repeat function*/
+    margin-top: 10%;
+}
+/* Individual gallery items */
+.gallery-item {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Center h3 text + color */
+.gallery-item h3 {
+    text-align: center;
+    color: #1da330; 
+}
+
+/* Remove default link styling */
+        .gallery-item a { 
+            text-decoration: none; /* Remove link blue or purple */
+            color: inherit;
+            display: block; /* Make the entire area clickable */
+        }
+
+        /* Hover effect */
+        .gallery-item a:hover {
+            transform: scale(1.05); /*growing scale effect on hover */
+            transition: 0.3s ease; /* Smooth transition for the hover effect */
+        }
+
+        .gallery-item a:hover img {
+            opacity: 0.85; /* Slightly dim the image on hover */
+        }
+
+
+/* Center image inside figure */
+figure {
+    text-align: center;
+}
+
+/* Square sizing */
+figure img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+figcaption {
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 8px;
+}
+
+/*About me Page CSS*/ 
+    .about-page {
+        width: 100%;
+        margin:  auto;
+        padding: 30px;
+        position: relative;
+    }
+
+    .about-title {
+        text-align: center;
+        font-size: 50px;
+        margin-bottom: 25px;
+        color:#258a06;
+        font-weight: bold;
+    }
+
+    .content {
+        display: flex;
+        gap: 30px;
+    }
+
+    .image-box {
+        width: 720px;
+        height: 530px;
+        justify-content: center;
+        display: flex;
+    }
+
+    .right-section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .name-box {
+        padding: 10px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        color:#258a06;
+    }
+
+    .summary {
+        padding: 20px;
+        min-height: 80px;
+    }
+
+    .bottom-div a {
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+        padding: 10px 15px;
+        text-decoration: none;
+        color:#0b8e54;
+    }
+
+    .bottom-div a:hover {
+        background-color: #a3d31d;
+    }
+
+/* Hobbies Page CSS */
+        .hobbies-container {
+            width: 90%;
+            margin: 40px auto;
+        }
+
+
+        .hobbies-page h1 {
+            text-align: center;
+            font-size: 50px;
+            color: #258a06;
+            margin-bottom: 25px;
+        }
+
+        /* 3 Even Columns */
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+
+        .hobby-item h3{
+            text-align: center;
+            color: #1da330; 
+            font-size: 30px;
+
+        }
+
+        /* Square Images */
+        .hobby-item img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        /* Text under image */
+        .hobby-item p {
+            margin-top: 15px;
+        }
+
+        /* Bottom Right Buttons */
+        .bottom-row {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .bottom-row a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #0b8e54;
+        }
+
+        .bottom-row a:hover {
+            background-color: #a3d31d;
+        }
+        
+     
