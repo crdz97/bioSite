@@ -21,7 +21,7 @@ body {
     margin:  auto;      /* Centers the container */
 }
 
-/* "Hero" image div */
+/* "Hero" image nav */
 #hero-image {
     position: relative;  /* reference for absolute positioning */
     margin: 0 auto;
@@ -39,21 +39,24 @@ body {
     font-size: 5em;      
     font-weight: bold;
     color: #258a06;
+    text-align: left;
 }
 
 #quote h2 {
     margin: 0;
-    top: 20px;
+    top: 30px;
     font-size: 3.2em;
     font-style: italic;
     text-align: center;
     color: #0b8e54;
 }
 
-.image-gallery {
+nav.image-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* three columns in 1 fraction with repeat function*/
-    margin-top: 10%;
+    margin: 0;
+    padding: 20px;
+    gap: 30px; /* space between items */
 }
 /* Individual gallery items */
 .gallery-item {
@@ -72,6 +75,7 @@ body {
             text-decoration: none; /* Remove link blue or purple */
             color: inherit;
             display: block; /* Make the entire area clickable */
+            box-shadow: 2px 5px 8px #075c36;
         }
 
         /* Hover effect */
@@ -83,8 +87,6 @@ body {
         .gallery-item a:hover img {
             opacity: 0.85; /* Slightly dim the image on hover */
         }
-
-
 /* Center image inside figure */
 figure {
     text-align: center;
@@ -103,66 +105,81 @@ figcaption {
     margin-top: 8px;
 }
 
-/*About me Page CSS*/ 
+    
     .about-page {
-        width: 100%;
-        margin:  auto;
-        padding: 30px;
-        position: relative;
+        max-width: 1400px;      /* limits the width of the content */
+        margin: auto;   /* centers the whole page */
+        padding: 20px;
     }
 
-    .about-title {
+    /* Title */
+    .about-header {
         text-align: center;
         font-size: 50px;
-        margin-bottom: 25px;
-        color:#258a06;
+        margin-bottom: 40px;
+        color: #258a06;
         font-weight: bold;
     }
 
+    /* Content Layout */
     .content {
-        display: flex;
-        gap: 30px;
-    }
-
-    .image-box {
-        width: 720px;
-        height: 530px;
+        display: flex; /* side by side layout */
         justify-content: center;
-        display: flex;
+        align-items: center;
+        gap: 100px; /* space between image and text */
     }
 
-    .right-section {
+    /* Image */
+    .image-box {
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+        text-align: center;
     }
 
+    .image-box img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    /* Right text*/
+    .right-section {
+        flex: 2;
+    }
+
+    /* Name */
     .name-box {
-        padding: 10px;
-        text-align: center;
         font-size: 30px;
         font-weight: bold;
-        color:#258a06;
+        color: #258a06;
+        text-align: center;
+        margin-bottom: 20px;
     }
 
+    /* Summary */
     .summary {
-        padding: 20px;
-        min-height: 80px;
+        font-size: 18px;
+        line-height: 1.6;
     }
 
-    .bottom-div a {
-        position: absolute;
-        bottom: 20px;
-        right: 30px;
+    /* Bottom Link */
+    .bottom-nav {
+        text-align: right;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .bottom-nav a {
         padding: 10px 15px;
         text-decoration: none;
-        color:#0b8e54;
+        color: #0b8e54;
     }
 
-    .bottom-div a:hover {
+    .bottom-nav a:hover {
         background-color: #a3d31d;
     }
+
+
+
 
 /* Hobbies Page CSS */
         .hobbies-container {
@@ -171,9 +188,9 @@ figcaption {
         }
 
 
-        .hobbies-page h1 {
+        .hobbies-header {
             text-align: center;
-            font-size: 50px;
+            font-size: 40px;
             color: #258a06;
             margin-bottom: 25px;
         }
@@ -211,7 +228,7 @@ figcaption {
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .bottom-row a {
@@ -224,4 +241,52 @@ figcaption {
             background-color: #a3d31d;
         }
         
-     
+    /* Community Page CSS */
+            #community-image {
+                position: relative;  /* reference for absolute positioning */
+                margin: 0 auto;
+                overflow: hidden;    /* hides overflow */
+            }
+
+            #community-image img {
+                width: 100%;         /* image fills container */
+                height: auto;        /* maintain aspect ratio */
+                display: block;
+            }
+            #Community {
+                text-align: center;
+                margin-top: 40px;
+                    }
+
+            #Community h2 {
+                font-size:30px;
+                color: #0b8e54;
+            }
+
+            .Links {
+                display: flex;
+                justify-content: center;
+                gap:40px;
+                margin-top: 30px;
+                font-size:20px;
+            }
+
+            .Links a {
+                padding: 10px 15px;
+                text-decoration: none;
+                color: #0b8e54;
+                box-shadow: 2px 5px 8px #075c36;
+
+            }
+    
+
+            .Links a:hover {
+                background-color: #a3d31d;
+            }
+.footer {
+    width: 100%;
+    text-align: center;        /* center your name */
+    padding: 10px;
+    border-top: 4px solid #075c36; /* solid horizontal line */
+    box-sizing: border-box;    /* ensures padding doesn’t break layout */
+}
