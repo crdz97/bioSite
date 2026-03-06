@@ -11,9 +11,34 @@ W3Schools. (n.d.). Style display property. W3Schoolshttps://www.w3schools.com/js
 */
 
 /* Landing Page CSS */
+#navbar {
+    overflow: hidden;
+    background-color: #941904; /* Same as header */  
+    border-bottom: solid 30px black; /* Border below navbar */
+    display:flex;
+    justify-content: flex-end; /* Aligns links to the right */ 
+}
+
+/* Navbar links */
+#navbar a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+#navbar a:hover {
+    background-color: black;
+    color: #075c36;
+}
+
 body {
     margin: 0;
     font-family: Roboto, sans-serif;
+    background-color: black;
 }
 
 .container {
@@ -23,32 +48,34 @@ body {
 
 /* "Hero" image nav */
 #hero-image {
-    position: relative;  /* reference for absolute positioning */
-    margin: 0 auto;
-    overflow: hidden;    /* hides overflow */
-}
+    position: relative;
+    margin: 10px auto;
+    overflow: hidden;
+    max-width: 1100px;
+    border: 4px solid #b63018;
+    padding: 10px;
+    background-color: black;
+}   
 
 #hero-image img {
     width: 100%;         /* image fills container */
-    height: auto;        /* maintain aspect ratio */
+    height: auto;   /* maintain aspect ratio */
     display: block;
 }
 
-/* H1 styling */
-#container h1 {         
-    font-size: 5em;      
-    font-weight: bold;
-    color: #258a06;
-    text-align: left;
-}
 
 #quote h2 {
-    margin: 0;
     top: 30px;
-    font-size: 3.2em;
+    font-size: 4em;
     font-style: italic;
     text-align: center;
     color: #0b8e54;
+    border: 2px solid hsl(153, 95%, 14%);
+    padding: 20px;  
+    width: 90%;
+    margin: 40px auto; /* centers the quote */
+    background-color: black;
+
 }
 
 nav.image-gallery {
@@ -75,7 +102,7 @@ nav.image-gallery {
             text-decoration: none; /* Remove link blue or purple */
             color: inherit;
             display: block; /* Make the entire area clickable */
-            box-shadow: 2px 5px 8px #075c36;
+            box-shadow: 2px 5px 8px #b63018;
         }
 
         /* Hover effect */
@@ -97,6 +124,7 @@ figure img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 figcaption {
@@ -116,8 +144,8 @@ figcaption {
     .about-header {
         text-align: center;
         font-size: 50px;
-        margin-bottom: 40px;
-        color: #258a06;
+        margin-bottom: 20px;
+        color: #b63018;
         font-weight: bold;
     }
 
@@ -139,6 +167,9 @@ figcaption {
         width: 100%;
         max-width: 500px;
         height: auto;
+        border:#075c36 solid 4px; 
+        border-radius: 20px;
+
     }
 
     /* Right text*/
@@ -146,19 +177,12 @@ figcaption {
         flex: 2;
     }
 
-    /* Name */
-    .name-box {
-        font-size: 30px;
-        font-weight: bold;
-        color: #258a06;
-        text-align: center;
-        margin-bottom: 20px;
-    }
 
     /* Summary */
     .summary {
         font-size: 18px;
         line-height: 1.6;
+        color: white;
     }
 
     /* Bottom Link */
@@ -175,7 +199,8 @@ figcaption {
     }
 
     .bottom-nav a:hover {
-        background-color: #a3d31d;
+        background-color: #b63018;
+        color: black;
     }
 
 
@@ -202,7 +227,12 @@ figcaption {
             gap: 30px;
             margin-bottom: 40px;
         }
-
+        .hobby-item {
+            text-align: center;
+            background-color: black;
+            padding: 10px;
+            border-radius: 30px
+        }
 
         .hobby-item h3{
             text-align: center;
@@ -216,11 +246,18 @@ figcaption {
             width: 100%;
             aspect-ratio: 1 / 1;
             object-fit: cover;
+            border: #b63018 solid 4px;
+            padding: 6px;
+            background: black;
+            border-radius: 30px;
         }
 
         /* Text under image */
         .hobby-item p {
             margin-top: 15px;
+            color: white; 
+            font-size: 18px;
+            text-align: center;
         }
 
         /* Bottom Right Buttons */
@@ -243,9 +280,13 @@ figcaption {
         
     /* Community Page CSS */
             #community-image {
-                position: relative;  /* reference for absolute positioning */
-                margin: 0 auto;
-                overflow: hidden;    /* hides overflow */
+                position: relative;
+                margin: 10px auto;
+                overflow: hidden;
+                max-width: 1100px;
+                border: 4px solid #b63018;
+                padding: 20px;
+                background-color: black;
             }
 
             #community-image img {
@@ -274,14 +315,15 @@ figcaption {
             .Links a {
                 padding: 10px 15px;
                 text-decoration: none;
-                color: #0b8e54;
-                box-shadow: 2px 5px 8px #075c36;
+                color: white;
+                box-shadow: 2px 5px 8px #b63018;
 
             }
     
 
             .Links a:hover {
-                background-color: #a3d31d;
+                background-color: #b63018;
+                color: black;
             }
 .footer {
     width: 100%;
@@ -289,4 +331,6 @@ figcaption {
     padding: 10px;
     border-top: 4px solid #075c36; /* solid horizontal line */
     box-sizing: border-box;    /* ensures padding doesn’t break layout */
+    color: white;
+
 }
